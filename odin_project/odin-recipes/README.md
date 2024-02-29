@@ -6,5 +6,5 @@ It's time to practice all of the HTML knowledge I have aquired so far in this ea
 
 The website will consist of a main index page which will have links to a few recipies. The website isn't intended to look 'pretty' at this stage.
 
-It is important to bare in mind that this project is just to build HTML fluency and will likely be revisited with CSS as a later stage.
+It is important to bare in mind that this project is just to build HTML fluency and will likely be revisited with CSS at a later stage.
 
