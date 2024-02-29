@@ -1,0 +1,9 @@
+/* external style for practice excercise */
+div {
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	background-color: red;
+}
+

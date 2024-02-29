@@ -1,0 +1,14 @@
+.firstclass, .secondclass {
+	font-size: 28px;
+	font-family: Helvetica, 'Times New Roman', sans-serif;
+}
+
+.firstclass {
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.secondclass {
+	background-color: #f2db0c;
+}
