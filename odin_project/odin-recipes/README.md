@@ -1,4 +1,4 @@
-** Odin Recipies**
+**Odin Recipes**
 
 A beginner html project for [The Odin Project](https://theodinproject.com 'The Odin Project open source Web Dev course') open source web dev course.
 
