@@ -83,23 +83,29 @@ print(f'Hey {guest_list[4]}, please will you still come to me biggerer and bette
 print(f'Hey {guest_list[5]}, please will you still come to me biggerer and betterer party?')
 print(f'Hey {guest_list[6]}, please will you still come to me biggerer and betterer party?')
 
+print('\n3.7 Shrinking Guest List\n- - - - - -')
+#You just found out that your new dinner table won't arrive in time for dinner. so now you only have space for 2 guests.
+#Start with your programe from 3.6 and add a new line that prints a message saying you can only invite 2 people to dinner.
+print('Sorry, all, but my new table won\'t arrive in time so I\'ll only be able to have 2 of you over.')
+print('')
+#Use pop() to remove guests from your list one at a time until only two names remain in yoru list. Each time you pop a name from your list, print a message to that person letting them knowyou're sorry and can't invite them to dinner.
 
+first_out = guest_list.pop(6)
+print(f'Sorry {first_out}, but I can now only have 2 people to dinner, and you\'re just not cool enough any more!')
+second_out = guest_list.pop(0)
+print(f'Sorry {second_out}, but I can now only have 2 people to dinner, and you\'re just not cool enough any more!')
+third_out = guest_list.pop(1)
+print(f'Sorry {third_out}, but I can now only have 2 people to dinner, and you\'re just not cool enough any more!')
+fourth_out = guest_list.pop(3)
+print(f'Sorry {fourth_out}, but I can now only have 2 people to dinner, and you\'re just not cool enough any more!')
+print('')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
+#Print a message to each of the last two people on your list, letting them know they are still invited.
+print(f'Hey {guest_list [0]}, don\'t worry, you\'re obviously the coolest of the cool and can still come to play at my party!')
+print(f'Hey {guest_list [1]}, don\'t worry, you\'re obviously the coolest of the cool and can still come to play at my party!')
+print('')
+#Use del to remove the last two names from your list so it's empty. Print your list to make sure you actually have an empty list at the end.
+del guest_list[0]
+del guest_list[0]
+del guest_list[0]
+print(guest_list)
