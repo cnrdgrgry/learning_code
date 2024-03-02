@@ -109,3 +109,41 @@ del guest_list[0]
 del guest_list[0]
 del guest_list[0]
 print(guest_list)
+
+print('\n3.8 Seeing The World\n- - - - - -')
+# Think of at least five places in the world you'd like to visit.
+#Store the locations in a list and make sure they're not in alphabetical order.
+
+places_to_go = ['canada', 'iceland', 'norway', 'finland', 'kenya', 'australia']
+print(places_to_go)
+
+#Use sorted() to print your list in alphabetical order without modifying the actual list
+print(sorted(places_to_go))
+
+#Show that your list is still in its original order by printing it again.
+print(places_to_go)
+
+#Use reverse() to change the order of your list again. Print the list to show it's back to its original order.
+places_to_go.reverse()
+print(places_to_go)
+
+#Use revers() again to put the list back to its original order, print the list again to make sure.
+places_to_go.reverse()
+print(places_to_go)
+
+#Use sort() to orginaise your list in alphabetical order, then print it to show the order has been changed.
+places_to_go.sort()
+print(places_to_go)
+
+#Use sort() to change your list so it's stored in reverse-alphabetical order.
+#Print the list to show that its order has changed.
+places_to_go.sort(reverse=True)
+print(places_to_go)
+
+print('\n3.9 Dinner Guests\n- - - - - -')
+#Working with one of the programs from 3.4-3.7 above, use len() to print a message indicating the number of people 
+#you're inviting to dinner.
+
+guest_list = ['Cookie Monster', 'Bert', 'Ernie', 'Forest Gump']
+print(f'There are {len(guest_list)} guests coming to dinner today')
+
