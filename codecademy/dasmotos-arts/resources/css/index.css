@@ -1,0 +1,55 @@
+body {
+        width: 1200px;
+        font-family: Helivetica;
+}
+
+h4 {
+        font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+}
+
+span {
+        font-weight: bold;
+        color: blue;
+}
+
+.header {
+        width: 1200px;
+        font-size: 100px;
+        font-weight: bold;
+        color: khaki;
+        text-align: center;
+        object-fit: contain;
+        
+}
+
+.image {
+        width: 1200px;
+        background-image: url('./../images/pattern.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 120px;
+}
+
+.category {
+        font-size: 32px;
+        color: white;
+}
+
+.brushes {
+        background-color: mediumspringgreen;
+        width: 1200px;
+}
+
+.frames {
+        background-color: lightcoral;
+ width: 1200px;
+}
+
+.paint {
+        background-color: skyblue;
+        width: 1200px;
+}
