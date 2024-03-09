@@ -1,0 +1,148 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin: 10px;
+}
+
+h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 30px;
+    text-align: center;
+margin-top: 5px;
+margin-bottom: -10px;
+}
+
+h3 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    margin: 40px;
+}
+
+p {
+    line-height: 1.3rem;
+}
+
+.labels {
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.fontitem {
+    font-weight: 500;
+}
+
+.fontlabel {
+    text-decoration: underline;
+}
+
+.fontsample1 {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.fontsample2 {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.fontsample3 {
+    font-family: 'Raleway', sans-serif:
+}
+
+.regular {
+    font-weight: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.colorparent,
+.fontparent {
+    font-size: 18px
+}
+
+.highlites {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f4e5c2;
+    background-color: #295f4e;
+    padding: 1rem;
+
+}
+
+.night {
+    background-color: #323232;
+    color: #f4e5c2;
+    font-weight: 600;
+}
+
+.deep {
+    background-color: #295f4e;
+    color: #f4e5c2;
+    font-weight: 600;
+}
+
+.spearmint {
+    background-color: #6db193;
+    color: #f4e5c2;
+    font-weight: 600;
+}
+
+.desert {
+    background-color: #f4e5c2;
+    color: #323232;
+    font-weight: 600;
+}
+
+/* flexbox formatting below */
+
+.colorparent {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.coloritem {
+    padding: 10px;
+    margin: 20px;
+    min-width: 33%;
+    max-width: 45%;
+    flex: 1;
+    text-align: center;
+}
+
+.fontparent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.fontitem {
+    border: solid lightgrey 1px;
+    padding: 10px;
+    margin: 20px;
+    min-width: 33%;
+    max-width: 45%;
+    flex: 1;
+    justify-content: justify;
+}
+
+.elemental {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    border: solid lightgrey 1px;
+    padding: 10px;
+    margin: 20px;
+}
+/* color formatting below */
