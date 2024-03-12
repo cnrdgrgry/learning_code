@@ -1,0 +1,24 @@
+<html><body><script>
+//4-2; It's possible to use for...of to loop over the letters of a string. Write a loop that
+//will loop over your name printing each letter on a spearate line..
+
+let myName = 'Conrad'
+
+for (let char of myName) {
+    console.log(`${char}`);
+}
+
+//4-3; use the entries method with a for...of loop to print something based on the string of your name.
+
+for (let [index, item] of myName.split("").entries()) {
+    console.log(`${index}: ${item}`);
+}
+
+for (let index = 0; index < myName.split("").length; index ++){ 
+    console.log(`${myName[index]}`);
+    }
+
+
+
+
+</script></body></html>
