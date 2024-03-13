@@ -55,6 +55,17 @@
 
       let arrowDate = () => console.log(new Date);
 
+      //Write a function that takes a prefix and a suffix and returns a new
+      //function that adds the prefix and suffix to a provided string.
+      function makeWrapper(prefix, suffix) {
+         return function (someWords) {
+            return prefix + someWords + suffix;
+          };
+      }
+        
+      let wrapMe = makeWrapper('[[', ']]')
+      wrapMe('Well this is cosy')
+
    </script>
       <<h1>This is my test page.</h1>
   </body>
