@@ -20,14 +20,33 @@
 			.incorrect {
 				color: red;
 			}
+
+			[v-cloak] {
+				display: none;
+			}
 		</style>
 	</head>
 
 	<body>
 		<h1>FlashWord</h1>
 
-		<div id="app">
+		<div id="app" v-cloak>
+			<!-- have to style the v-cloak so it's hidden until loaded -->
+
 			What is the English translation of the word <strong>{{ wordA }}</strong>?
+			<input type="text" v-model="answer" />
+			<!-- Here -above v-model links the input to data['answer'] -->
+
+			<p v-if="answer !=''">You answered: {{ answer }}</p>
+			<!-- Here-above conditional rendering only if data['answer'] is not empty string -->
+
+			<button v-on:click="checkAnswer()">Check answer</button>
+			<!-- Here v-on:Click is linking to method checkAnswer which is checking if input is correct, and if there is any content at all making data['showFeedback'] == true for below conditional render of div -->
+
+			<div v-if="showFeedback">
+				<p v-if="correct">Sweet, you got it</p>
+				<p v-else="correct !== null">Sorry, please try again</p>
+			</div>
 		</div>
 	</body>
 </html>
