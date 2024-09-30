@@ -13,6 +13,11 @@ const FlashWord = {
 			this.correct = this.wordB == this.answer;
 			this.showFeedback = true;
 		},
+		resetForm() {
+			this.correct = null;
+			this.answer = "";
+			this.showFeedback = null;
+		},
 	},
 };
 

@@ -42,10 +42,13 @@
 
 			<button v-on:click="checkAnswer()">Check answer</button>
 			<!-- Here v-on:Click is linking to method checkAnswer which is checking if input is correct, and if there is any content at all making data['showFeedback'] == true for below conditional render of div -->
+			<button v-if="correct" v-on:click="resetForm()">Reset</button>
 
 			<div v-if="showFeedback">
-				<p v-if="correct">Sweet, you got it</p>
-				<p v-else="correct !== null">Sorry, please try again</p>
+				<p v-if="correct" class="correct">Sweet, you got it</p>
+				<p v-else="correct !== null" class="incorrect">
+					Sorry, please try again
+				</p>
 			</div>
 		</div>
 	</body>
