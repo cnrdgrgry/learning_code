@@ -20,7 +20,9 @@
 			.incorrect {
 				color: red;
 			}
-
+			.error {
+				background-color: lightpink;
+			}
 			[v-cloak] {
 				display: none;
 			}
@@ -33,23 +35,111 @@
 		<!-- have to style the v-cloak so it's hidden until loaded -->
 		<div id="app" v-cloak>
 			What is the English translation of the word <strong>{{ wordA }}</strong>?
-			<!-- Here v-model links the input to data['answer'] -->
-			<input type="text" v-model="answer" />
-
-			<!-- Conditional rendering only if data['answer'] is not empty string -->
-			<p v-if="answer !=''">You answered: {{ answer }}</p>
+			<!-- Here v-model links the input to data['answer'] the v-bind:class {object} syntax is a simple conditional {apply this class: if this}-->
+			<input
+				type="text"
+				v-model="answer"
+				v-on:keyup.enter="checkAnswer()"
+				v-bind:class="{ error : hasError }"
+			/>
 
 			<!-- Here v-on:Click is linking to method checkAnswer which is checking if input is correct, and if there is any content at all making data['showFeedback'] == true for below conditional render of div just below these two buttons -->
 			<button v-on:click="checkAnswer()">Check answer</button>
 
-			<div v-if="showFeedback">
+			<template v-if="showFeedback">
+				<img v-bind:src="image" />
 				<p v-if="correct" class="correct">Sweet, you got it</p>
 				<p v-else="correct !== null" class="incorrect">
 					Sorry, please try again
 				</p>
 				<!-- Reset button conditionally renders if the correct answer is given and submitted, and on click will reset the form fields. -->
 				<button v-on:click="resetForm()">Reset</button>
+			</template>
+
+			<!-- Check Boxes with conditional rendering of 'hint' -->
+			<h2>Show Hint with checkbox</h2>
+			<input type="checkbox" id="showHint" v-model="showHint" />
+			<label for="showHint">Show hint?</label>
+
+			<div v-if="showHint">
+				This hint is only showing because you asked by checking the box!
 			</div>
+
+			<!-- Conditional rendering only if data['answer'] is not empty string -->
+			<p v-if="answer !=''">You answered: {{ answer }}</p>
+
+			<h2>Select category with check box</h2>
+			<input
+				type="checkbox"
+				id="greetings"
+				value="greetings"
+				v-model="categories"
+			/>
+			<label for="greetings">Greetings</label>
+
+			<input type="checkbox" id="colors" value="colors" v-model="categories" />
+			<label for="colors">Colors</label>
+
+			<input type="checkbox" id="verbs" value="verbs" v-model="categories" />
+			<label for="verbs">Verbs</label>
+
+			<h2>Select difficulty level with radios</h2>
+			<input type="radio" id="easy" value="easy" name="level" v-model="level" />
+			<label for="easy">Easy</label>
+
+			<input
+				type="radio"
+				id="moderate"
+				value="moderate"
+				name="level"
+				v-model="level"
+			/>
+			<label for="moderate">Moderate</label>
+
+			<input
+				type="radio"
+				id="difficult"
+				value="difficult"
+				name="level"
+				v-model="level"
+			/>
+			<label for="difficult">Difficult</label>
+			<h2>Select difficulty level with select</h2>
+			<select v-model="level">
+				<option value="easy">Easy</option>
+				<option value="moderate">Moderate</option>
+				<option value="difficult">Difficult</option>
+			</select>
+
+			<h2>User the word in a sentence</h2>
+			<textarea v-model="textContent"></textarea>
+			<p>You input: " {{textContent}} "</p>
+
+			<h2>Array example</h2>
+			<ul>
+				<!-- listing thru spanishWord array in data['spanishWord'] -->
+				<li v-for="spanishWord, index in spanishWords">
+					<template
+						v-if="spanishWord.length>
+						3"
+					>
+						{{ index + 1}} {{ spanishWord }}
+					</template>
+				</li>
+			</ul>
+			<h2>Object example</h2>
+			<ul>
+				<!-- listing thru word object in data['word'] -->
+				<li v-for="thisWord, index, key in word">
+					{{index}} {{key}}: {{ thisWord }}
+				</li>
+			</ul>
+
+			<h2>Array of Object example</h2>
+			<ul>
+				<!-- listing thru word array of objects in data['words'] -->
+				<li v-for="wordObject in words">{{ wordObject.wordA }}</li>
+			</ul>
 		</div>
 	</body>
 </html>
